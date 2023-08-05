@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #352f3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#regForm{
+    width: 50vw;
+    height: 80vh; 
+    background-color: #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin:20% 0;
+    /* padding: 0 5%; */
+}
+form{
+ 
+    width: 80%;
+    height: 70vh;
+    background-color: #352f3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 5%;
+}
+.title{
+    color: thistle;
+}
+.clickb{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin:  10px 0 ;
+    padding: 2px;
+}  
+#butn{
+    width: 80%;
+    height: 35px;
+    outline: none;
+    border: none;
+    background-color: #e6e6e6;
+    cursor: pointer;
+    border-radius: 2px;
+    margin: 3px 0;
+}  
+.name, .email, #butn{
+    width: 100%; 
+}
+.name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.inp-group{
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+}
+.inp-grp{
+    /* font-size: large;        */
+    display: flex;
+    gap: 0 50px;
+    flex-direction: column;  
+    width: 100%;
+    margin: 2% 0 ;   
+    color:azure;
+    padding: 0.50px;
+}
+input{
+    width: 100%;
+    outline: none;
+    padding: 3%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: lightgray;
+    color: black;
+    border: none;
+
+}
+#pdf{
+    width: 200px;
+    height: 40px;
+    background-color: lightcoral;
+    outline: none;
+    border: none;
+}
+#modalHead{
+    background-color:lightpink;
+}
+#m-body{
+    background-color: lightpink;
+}
+#list{
+    background-color: cadetblue;
+}
+@media screen and (max-width:  576px ) {
+
+   .form{
+    width: 70%;
+    height: 90vh;
+    display: flex;
+    
+   }
+   form{
+    width: 90%;
+    height: 85vh;
+   }
+   .email, .name, .clickb{
+    flex-direction: column;
+   }
+
+    
+}
+.modal {
+display: none;
+}
+@media screen and (max-width: 990px) {
+    .form{
+        width: 80vw;
+    }
+
+    
+}

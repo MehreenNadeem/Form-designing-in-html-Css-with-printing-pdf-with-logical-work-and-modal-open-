@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="regForm">
+        <form action="#" method="post" onsubmit="handleSubmit();" autocomplete="on">
+        <div class="title">
+      <h1> Sign Up</h1>
+        </div>
+        <div class="clickb">
+            <button id="butn"> Log In</button>
+            <button id="butn"> Sign Up</button>
+        </div>
+        <div class="inp-group">
+        <div class="inp-grp">
+            <label  for="fname">First Name:</label>
+            <input   type="text" name="fname" placeholder="Enter first name" id="fname">
+        </div>
+        <div class="inp-grp">
+            <label  for="lname"> Last Name: </label>
+            <input id="lname" type="text" name="lname"  placeholder="Enter last name">
+        </div>
+    </div>
+        <div class="email"> 
+            <div class="inp-grp">
+            <label  for="email">Email:</label>
+            <input id="email" type="email" name="email" placeholder="Enter your email">
+        </div>
+        </div>
+<div class="inp-group">
+        <div class="inp-grp">
+            <label  for="pass">Password:</label>
+            <input id="pass" type="password" name="pass" placeholder="Enter password">
+        </div>
+        <div class="inp-grp">
+            <label  for="cpass"> Confirm Password:</label>
+            <input id="cPass" type="password" name="cpass" placeholder="Enter Again">
+        </div>
+    </div>
+        <div class="inp-grp">
+            <button
+            onclick="sendEmail()"
+            id="butn"
+             class="btn"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            type="submit"
+            name="submit"
+            value="Register" >
+              Submit </button>
+        </div>
+    </form>
+    </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" id="modalHead">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Form Info</h1>
+
+          <button type="button"
+           class="btn-close"
+            data-bs-dismiss="modal" 
+            aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body" id="m-body">
+          <ul class="list-group" id="list">           
+          </ul>
+          <div class="modal-footer">
+            <button id="pdf">PDF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+    <script src="assets/js/main2.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("4a4wxcW-gTWpZAwDm");
+   })();
+</script>
+</body>
+</html>
